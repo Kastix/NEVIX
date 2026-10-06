@@ -1,0 +1,57 @@
+{
+  "name": "nevix-launcher",
+  "productName": "NEVIX",
+  "version": "1.5.0",
+  "description": "NEVIX - a futuristic game launcher for Windows (Electron)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.nevix.launcher",
+    "productName": "NEVIX",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "scanner.js",
+      "gpu.js",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icons/icon.png"
+    },
+    "portable": {
+      "artifactName": "NEVIX.exe"
+    },
+    "copyright": "Copyright © MrPolishAv1x0"
+  },
+  "author": {
+    "name": "MrPolishAv1x0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "game-launcher",
+    "electron",
+    "windows",
+    "steam",
+    "launcher",
+    "glassmorphism"
+  ]
+}
