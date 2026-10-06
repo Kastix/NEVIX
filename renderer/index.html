@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: nevix-icon:">
+<title>NEVIX</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div id="app">
+  <div id="titlebar">
+    <div class="drag"></div>
+    <button id="wMin" title="Minimize">&#8212;</button>
+    <button id="wMax" title="Maximize">&#9633;</button>
+    <button id="wClose" title="Close" class="x">&#10005;</button>
+  </div>
+  <aside id="sidebar">
+    <div class="logo"><span class="logo-mark"></span>NEVIX</div>
+    <nav>
+      <button data-view="home" class="nav active"><i>&#9672;</i>HOME</button>
+      <button data-view="favorites" class="nav"><i>&#9733;</i>FAVORITES</button>
+      <button data-view="stats" class="nav"><i>&#9783;</i>STATISTICS</button>
+      <button data-view="settings" class="nav"><i>&#9881;</i>SETTINGS</button>
+    </nav>
+    <div class="side-foot">v1.5.0</div>
+  </aside>
+  <main id="main">
+    <header>
+      <div><div class="eyebrow" id="eyebrow">WELCOME BACK</div><h1>Your Gaming Hub</h1></div>
+      <div class="head-right"><input id="search" type="text" placeholder="Search games..." autocomplete="off"></div>
+    </header>
+    <section id="view"></section>
+  </main>
+  <footer id="monitor">
+    <div class="mon"><span>CPU</span><div class="bar"><b id="cpuB"></b></div><em id="cpuT">--</em></div>
+    <div class="mon"><span>RAM</span><div class="bar"><b id="ramB"></b></div><em id="ramT">--</em></div>
+    <div class="mon" id="gpuRow"><span>GPU</span><div class="bar"><b id="gpuB"></b></div><em id="gpuT">...</em></div>
+    <div class="mon"><span>FPS</span><div class="bar"><b id="fpsB"></b></div><em id="fpsT">--</em></div>
+    <div class="gm-chip hidden" id="gmChip">&#9679; GAME MODE</div>
+  </footer>
+</div>
+<div id="toasts"></div>
+<div id="dropzone"><div class="dz-box"><div class="dz-ico">&#10515;</div><h3>QUICK DROP</h3><p>Drop a game shortcut or .exe to add it to NEVIX</p></div></div>
+<div id="modal" class="hidden"></div>
+<div id="splash">
+  <div class="sp-drag"></div>
+  <div class="sp-orb o1"></div><div class="sp-orb o2"></div>
+  <div class="sp-core"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="sp-mark"></div></div>
+  <div class="sp-brand">NEVIX</div>
+  <div class="sp-welcome" id="spWelcome">Welcome</div>
+  <div class="sp-bar"><b></b></div>
+  <div class="sp-status" id="spStatus">Initializing...</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
